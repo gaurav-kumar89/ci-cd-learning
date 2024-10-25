@@ -1,0 +1,19 @@
+<div class="header">
+    <div class="nav-left">
+        <nav>
+            <a routerLink="/home" id="home" routerLinkActive="active">Home</a>
+            <a routerLink="/home" routerLinkActive="active">About</a>
+            <a routerLink="/module" routerLinkActive="active">Life Cycle Hook with lazy load covers</a>
+          </nav>
+.      
+    </div>
+
+    <div class="nav-right" *ngIf="logedUser">
+        <nav>
+            <a routerLink="/"> Total active user: {{activeUserdata}} </a>
+            <a id="activeuser" routerLink="/"> Total inactive user:{{inActiveuserdata}} </a>
+            <button class="btnClass" (click)="logout()">Log Out</button>
+        </nav>    
+    </div>
+
+    </div>

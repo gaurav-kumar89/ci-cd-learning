@@ -1,0 +1,37 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>
+      <button ngbNavLink>Table Data</button>
+      <ng-template ngbNavContent>
+      
+
+<table class="table ">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Customer Name</th>
+			<th scope="col">Customer ID</th>
+			<th scope="col">Status</th>
+            <th scope="col">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let cus of customers; index as i"  [ngClass]="{'table-active': cus.status === 1}">
+			<th scope="row">{{ i + 1 }}</th>
+			<td>
+				
+				{{ cus.cus_name }}
+			</td>
+			<td>{{ cus.cus_id | number }}</td>
+			<td>{{ cus.status === 1 ? 'Active':'Inactive' }}</td>
+            <td> <button (click)="setStatus(cus)">Change Status</button> </td>
+		</tr>
+	</tbody>
+</table>
+      </ng-template>
+    </li>
+    <!-- <li ngbNavItem>
+      <button ngbNavLink>Second</button>
+      <ng-template ngbNavContent>Second content</ng-template>
+    </li> -->
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
