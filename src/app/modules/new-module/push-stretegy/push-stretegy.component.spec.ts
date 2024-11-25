@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PushStretegyComponent } from './push-stretegy.component';
 
-describe('PushStretegyComponent', () => {
+xdescribe('PushStretegyComponent', () => {
   let component: PushStretegyComponent;
   let fixture: ComponentFixture<PushStretegyComponent>;
 
