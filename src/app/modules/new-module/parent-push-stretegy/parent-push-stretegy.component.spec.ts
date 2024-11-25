@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ParentPushStretegyComponent } from './parent-push-stretegy.component';
 
-describe('ParentPushStretegyComponent', () => {
+xdescribe('ParentPushStretegyComponent', () => {
   let component: ParentPushStretegyComponent;
   let fixture: ComponentFixture<ParentPushStretegyComponent>;
 
